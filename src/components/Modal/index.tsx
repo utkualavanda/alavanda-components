@@ -1,8 +1,8 @@
-import { Dialog, IconButton } from "@material-ui/core";
+import { Dialog, DialogProps, IconButton } from "@material-ui/core";
 import { Clear as ClearIcon } from "@mui/icons-material";
 import { Loading } from "../../components";
 
-interface IProps {
+interface IProps extends DialogProps {
   children: any;
   open: boolean;
   onExitButtonClick: () => void;
@@ -21,6 +21,7 @@ export default (props: IProps) => {
     disableBackdropClick = false,
     loading = false,
     size = "xs",
+    ...rest
   } = props;
 
   return (
@@ -30,6 +31,7 @@ export default (props: IProps) => {
         maxWidth={size}
         onBackdropClick={() => !disableBackdropClick && onBackdropClick()}
         fullWidth
+        {...rest}
       >
         <IconButton
           className="custom-modal-exit-button"

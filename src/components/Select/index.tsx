@@ -33,7 +33,7 @@ export default (props: ISelectProps) => {
     setValue,
     formState,
     register,
-	getValues,
+    getValues,
   } = useFormContext();
 
   const val = watchFunc(name);
@@ -64,9 +64,11 @@ export default (props: ISelectProps) => {
   const renderEndAdornment = () => {
     if (val && emptyValue) {
       return (
-        <IconButton onClick={() => setValue(name, "")}>
-          <ClearIcon />
-        </IconButton>
+        <div className="select-empty-value">
+          <IconButton onClick={() => setValue(name, "")}>
+            <ClearIcon />
+          </IconButton>
+        </div>
       );
     }
   };

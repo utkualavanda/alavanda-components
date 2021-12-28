@@ -1,10 +1,9 @@
-import { Form, Select } from "../../components";
+import { Button, Form, Select } from "../../components";
 import * as yup from "yup";
-import { Button } from "@material-ui/core";
 
 export default () => {
   return (
-    <div className="container">
+    <div className="container mt-3">
       <Form
         onSubmit={(data) => console.log(data)}
         validationSchema={{
@@ -53,9 +52,7 @@ export default () => {
             />
           </div>
           <div className="col-3 mt-3">
-            <Button variant="contained" type="submit" fullWidth>
-              Submit
-            </Button>
+            <Button label="Submit" type="submit" />
           </div>
         </div>
       </Form>

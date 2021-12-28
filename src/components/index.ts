@@ -6,6 +6,7 @@ import ModalHeader from "./Modal/Modal-Header";
 import ModalBody from "./Modal/Modal-Body";
 import ModalFooter from "./Modal/Modal-Footer";
 import Loading from "./Loading";
+import Button from "./Button";
 
 export {
   Input,
@@ -16,4 +17,5 @@ export {
   ModalBody,
   ModalFooter,
   Loading,
+  Button,
 };

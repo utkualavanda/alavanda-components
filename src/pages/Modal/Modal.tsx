@@ -1,7 +1,7 @@
-import { Button } from "@material-ui/core";
 import * as yup from "yup";
 import { useState } from "react";
 import {
+  Button,
   Form,
   Input,
   Modal,
@@ -19,10 +19,20 @@ interface IProps {
 export default (props: IProps) => {
   const { showModal, onClose } = props;
   const [show, setShow] = useState(showModal || false);
+  const [loading, setLoading] = useState(false);
 
   const closeModal = () => {
     setShow(false);
     onClose && onClose();
+  };
+
+  const handleSubmit = (data: any) => {
+    console.log(data);
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      closeModal();
+    }, 2500);
   };
 
   return (
@@ -31,10 +41,11 @@ export default (props: IProps) => {
       size="lg"
       onExitButtonClick={() => closeModal()}
       onBackdropClick={() => closeModal()}
+      loading={loading}
     >
       <ModalHeader title="test modal header" />
       <Form
-        onSubmit={(data) => console.log(data)}
+        onSubmit={(data) => handleSubmit(data)}
         validationSchema={{
           test_input1: yup
             .string()
@@ -44,7 +55,11 @@ export default (props: IProps) => {
         <ModalBody>
           <div className="row">
             <div className="col-6 mb-3">
-              <Input name="test_input1" label="test input1" />
+              <Input
+                name="test_input1"
+                label="test input1"
+                placeholder="test placeholder"
+              />
             </div>
             <div className="col-6 mb-3">
               <Input name="test_input2" label="test input2" />
@@ -64,14 +79,15 @@ export default (props: IProps) => {
         <ModalFooter>
           <div className="row">
             <div className="col-6">
-              <Button variant="outlined" fullWidth>
-                Test Button 1
-              </Button>
+              <Button
+                label="Cancel"
+                outlined
+                fullWidth
+                onClick={() => closeModal()}
+              />
             </div>
             <div className="col-6">
-              <Button variant="contained" type="submit" fullWidth>
-                Test Button 2
-              </Button>
+              <Button label="Submit" type="submit" />
             </div>
           </div>
         </ModalFooter>

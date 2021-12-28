@@ -1,23 +1,20 @@
-import { Button } from "@material-ui/core";
 import { useState } from "react";
+import { Button } from "../../components";
 import Modal from "./Modal";
 
 export default () => {
   const [show, setShow] = useState(false);
   return (
     <>
-      <div className="container">
+      <div className="container mt-3">
         <div className="row">
-          <div className="col-3 mt-3">
+          <div className="col-3">
             <Button
-              variant="contained"
-              fullWidth
+              label="Open Modal"
               onClick={() => {
                 setShow((prevState) => !prevState);
               }}
-            >
-              Open Modal
-            </Button>
+            />
           </div>
         </div>
       </div>
