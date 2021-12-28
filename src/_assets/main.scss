@@ -52,3 +52,10 @@ aside {
   display: flex;
   width: 100%;
 }
+
+.custom-modal-exit-button {
+  position: absolute !important;
+  right: 0;
+  top: 0;
+  margin: 10px 15px 0 0 !important;
+}

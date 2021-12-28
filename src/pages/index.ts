@@ -1,5 +1,5 @@
-import Select from "./Select";
 import Input from "./Input";
+import Select from "./Select";
+import Modal from "./Modal";
 
-export { Select };
-export { Input };
+export { Input, Select, Modal };

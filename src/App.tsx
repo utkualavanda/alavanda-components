@@ -5,7 +5,7 @@ import {
   Navigate,
   Link,
 } from "react-router-dom";
-import { Select, Input } from "../src/pages";
+import { Select, Input, Modal } from "../src/pages";
 
 function App() {
   return (
@@ -13,18 +13,22 @@ function App() {
       <aside>
         <ul>
           <li>
+            <Link to="/input">Input</Link>
+          </li>
+          <li>
             <Link to="/select">Select</Link>
           </li>
           <li>
-            <Link to="/input">Input</Link>
+            <Link to="/modal">Modal</Link>
           </li>
         </ul>
       </aside>
       <div className="page-content">
         <Routes>
-          <Route path="/select" element={<Select />}></Route>
           <Route path="/input" element={<Input />}></Route>
-          <Route path="*" element={<Navigate to="/select" />}></Route>
+          <Route path="/select" element={<Select />}></Route>
+          <Route path="/modal" element={<Modal />}></Route>
+          <Route path="*" element={<Navigate to="/input" />}></Route>
         </Routes>
       </div>
     </Router>
