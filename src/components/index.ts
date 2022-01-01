@@ -7,6 +7,7 @@ import ModalBody from "./Modal/Modal-Body";
 import ModalFooter from "./Modal/Modal-Footer";
 import Loading from "./Loading";
 import Button from "./Button";
+import DatePicker from "./DatePicker";
 
 export {
   Input,
@@ -18,4 +19,5 @@ export {
   ModalFooter,
   Loading,
   Button,
+  DatePicker,
 };

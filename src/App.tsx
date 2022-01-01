@@ -5,7 +5,7 @@ import {
   Navigate,
   Link,
 } from "react-router-dom";
-import { Home, Select, Input, Button, Modal } from "../src/pages";
+import { Home, Select, Input, Button, Modal, DatePicker } from "../src/pages";
 
 function App() {
   return (
@@ -27,6 +27,9 @@ function App() {
           <li>
             <Link to="/modal">Modal</Link>
           </li>
+          <li>
+            <Link to="/date-picker">Date Picker</Link>
+          </li>
         </ul>
       </aside>
       <div className="page-content">
@@ -36,6 +39,7 @@ function App() {
           <Route path="/select" element={<Select />}></Route>
           <Route path="/button" element={<Button />}></Route>
           <Route path="/modal" element={<Modal />}></Route>
+          <Route path="/date-picker" element={<DatePicker />}></Route>
           <Route path="*" element={<Navigate to="/home" />}></Route>
         </Routes>
       </div>

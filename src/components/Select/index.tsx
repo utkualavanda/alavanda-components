@@ -31,7 +31,7 @@ export default (props: ISelectProps) => {
     control,
     watch: watchFunc,
     setValue,
-    formState,
+    formState: { errors },
     register,
     getValues,
   } = useFormContext();
@@ -77,7 +77,7 @@ export default (props: ISelectProps) => {
     <FormControl
       variant="outlined"
       fullWidth
-      error={!!formState?.errors[name]?.message}
+      error={!!errors[name]?.message}
     >
       <InputLabel id={id}>{label}</InputLabel>
       <Controller
@@ -109,7 +109,7 @@ export default (props: ISelectProps) => {
         defaultValue={""}
       />
       <FormHelperText>
-        {formState?.errors[name]?.message || helperText}
+        {errors[name]?.message || helperText}
       </FormHelperText>
     </FormControl>
   );

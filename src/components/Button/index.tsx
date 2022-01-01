@@ -4,7 +4,6 @@ interface IProps extends ButtonProps {
   label: string;
   type?: "button" | "submit" | "reset";
   outlined?: boolean;
-  color?: "primary" | "inherit" | "secondary" | "default";
 }
 
 export default (props: IProps) => {
@@ -12,7 +11,6 @@ export default (props: IProps) => {
     label,
     type = "button",
     outlined = false,
-    color = "primary",
     ...rest
   } = props;
   return (
