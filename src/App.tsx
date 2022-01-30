@@ -4,8 +4,8 @@ import {
   Routes,
   Navigate,
   Link,
-} from "react-router-dom";
-import { Home, Select, Input, Button, Modal, DatePicker } from "../src/pages";
+} from 'react-router-dom';
+import { Home, Select, Input, Button, Modal, DatePicker } from '../src/pages';
 
 function App() {
   return (

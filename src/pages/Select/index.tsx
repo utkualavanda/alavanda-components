@@ -1,5 +1,5 @@
-import { Button, Form, Select } from "../../components";
-import * as yup from "yup";
+import { Button, Form, Select } from '../../components';
+import * as yup from 'yup';
 
 export default () => {
   return (
@@ -9,12 +9,12 @@ export default () => {
         validationSchema={{
           test_select1: yup
             .number()
-            .typeError("This field is required")
-            .required("This field is required"),
+            .typeError('This field is required')
+            .required('This field is required'),
           test_select2: yup
             .number()
-            .typeError("This field is required")
-            .required("This field is required"),
+            .typeError('This field is required')
+            .required('This field is required'),
         }}
         defaultValues={{ test_select1: 1, test_select2: 2 }}
       >
@@ -27,11 +27,11 @@ export default () => {
               emptyValue
               options={{
                 data: [
-                  { Name: "Name1", Value: 1 },
-                  { Name: "Name2", Value: 2 },
+                  { Name: 'Name1', Value: 1 },
+                  { Name: 'Name2', Value: 2 },
                 ],
-                displayField: "Name",
-                displayValue: "Value",
+                displayField: 'Name',
+                displayValue: 'Value',
               }}
             />
           </div>
@@ -43,11 +43,11 @@ export default () => {
               watch={(e) => console.log(e)}
               options={{
                 data: [
-                  { Name: "Name1", Value: 1 },
-                  { Name: "Name2", Value: 2 },
+                  { Name: 'Name1', Value: 1 },
+                  { Name: 'Name2', Value: 2 },
                 ],
-                displayField: "Name",
-                displayValue: "Value",
+                displayField: 'Name',
+                displayValue: 'Value',
               }}
             />
           </div>

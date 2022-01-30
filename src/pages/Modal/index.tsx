@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { Button } from "../../components";
-import Modal from "./Modal";
+import { useState } from 'react';
+import { Button } from '../../components';
+import Modal from './Modal';
 
 export default () => {
   const [show, setShow] = useState(false);

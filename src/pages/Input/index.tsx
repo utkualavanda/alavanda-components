@@ -1,5 +1,5 @@
-import { Button, Form, Input } from "../../components";
-import * as yup from "yup";
+import { Button, Form, Input } from '../../components';
+import * as yup from 'yup';
 
 export default () => {
   return (
@@ -7,8 +7,8 @@ export default () => {
       <Form
         onSubmit={(data) => console.log(data)}
         validationSchema={{
-          test_input1: yup.string().required("This field is required"),
-          test_input2: yup.string().required("This field is required"),
+          test_input1: yup.string().required('This field is required'),
+          test_input2: yup.string().required('This field is required'),
         }}
       >
         <div className="row">
@@ -16,7 +16,7 @@ export default () => {
             <Input
               name="test_input1"
               label="Test Input Component"
-			  placeholder="Test Placeholder"
+              placeholder="Test Placeholder"
               watch={(val) => console.log(val)}
             />
           </div>
@@ -24,7 +24,7 @@ export default () => {
             <Input
               name="test_input2"
               label="Test Input Component"
-              value={"Default input value"}
+              value={'Default input value'}
               watch={(val) => console.log(val)}
             />
           </div>

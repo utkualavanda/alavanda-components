@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo } from 'react';
 import {
   Select,
   MenuItem,
@@ -6,11 +6,11 @@ import {
   InputLabel,
   FormHelperText,
   IconButton,
-} from "@material-ui/core";
-import { Clear as ClearIcon } from "@mui/icons-material";
-import { v4 as uuidv4 } from "uuid";
-import { useFormContext, Controller } from "react-hook-form";
-import { ISelectProps } from "./type";
+} from '@material-ui/core';
+import { Clear as ClearIcon } from '@mui/icons-material';
+import { v4 as uuidv4 } from 'uuid';
+import { useFormContext, Controller } from 'react-hook-form';
+import { ISelectProps } from './type';
 
 export default (props: ISelectProps) => {
   const {
@@ -65,7 +65,7 @@ export default (props: ISelectProps) => {
     if (val && emptyValue) {
       return (
         <div className="select-empty-value">
-          <IconButton onClick={() => setValue(name, "")}>
+          <IconButton onClick={() => setValue(name, '')}>
             <ClearIcon />
           </IconButton>
         </div>
@@ -74,11 +74,7 @@ export default (props: ISelectProps) => {
   };
 
   return (
-    <FormControl
-      variant="outlined"
-      fullWidth
-      error={!!errors[name]?.message}
-    >
+    <FormControl variant="outlined" fullWidth error={!!errors[name]?.message}>
       <InputLabel id={id}>{label}</InputLabel>
       <Controller
         render={() => (
@@ -86,12 +82,12 @@ export default (props: ISelectProps) => {
             id={id}
             MenuProps={{
               anchorOrigin: {
-                vertical: "bottom",
-                horizontal: "left",
+                vertical: 'bottom',
+                horizontal: 'left',
               },
               transformOrigin: {
-                vertical: "top",
-                horizontal: "left",
+                vertical: 'top',
+                horizontal: 'left',
               },
               getContentAnchorEl: null,
             }}
@@ -106,11 +102,9 @@ export default (props: ISelectProps) => {
         )}
         name={name}
         control={control}
-        defaultValue={""}
+        defaultValue={''}
       />
-      <FormHelperText>
-        {errors[name]?.message || helperText}
-      </FormHelperText>
+      <FormHelperText>{errors[name]?.message || helperText}</FormHelperText>
     </FormControl>
   );
 };

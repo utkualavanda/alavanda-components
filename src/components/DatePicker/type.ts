@@ -1,7 +1,7 @@
-import { KeyboardDatePickerProps } from "@material-ui/pickers";
+import { KeyboardDatePickerProps } from '@material-ui/pickers';
 
 export interface IDatePickerProps
-  extends Omit<KeyboardDatePickerProps, "id" | "name" | "onChange" | "value"> {
+  extends Omit<KeyboardDatePickerProps, 'id' | 'name' | 'onChange' | 'value'> {
   id?: string;
   name: string;
   label: string;

@@ -1,6 +1,6 @@
-import { Dialog, DialogProps, IconButton } from "@material-ui/core";
-import { Clear as ClearIcon } from "@mui/icons-material";
-import { Loading } from "../../components";
+import { Dialog, DialogProps, IconButton } from '@material-ui/core';
+import { Clear as ClearIcon } from '@mui/icons-material';
+import { Loading } from '../../components';
 
 interface IProps extends DialogProps {
   children: any;
@@ -9,7 +9,7 @@ interface IProps extends DialogProps {
   onBackdropClick: () => void;
   disableBackdropClick?: boolean;
   loading?: boolean;
-  size?: "xs" | "sm" | "md" | "lg" | "xl";
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 }
 
 export default (props: IProps) => {
@@ -20,7 +20,7 @@ export default (props: IProps) => {
     onBackdropClick,
     disableBackdropClick = false,
     loading = false,
-    size = "xs",
+    size = 'xs',
     ...rest
   } = props;
 

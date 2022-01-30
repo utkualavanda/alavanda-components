@@ -1,6 +1,6 @@
-import * as yup from "yup";
-import { useForm, FormProvider } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from 'yup';
+import { useForm, FormProvider } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
 
 interface IFrom {
   onSubmit: (val: any) => void;
@@ -26,8 +26,8 @@ export default (props: IFrom) => {
   const methods = useForm({
     resolver: yupResolver(validationObj),
     defaultValues: defaultValues,
-    mode: "onBlur",
-    reValidateMode: "onChange",
+    mode: 'onBlur',
+    reValidateMode: 'onChange',
   });
 
   const onSubmitForm = (data: any) => onSubmit(data);

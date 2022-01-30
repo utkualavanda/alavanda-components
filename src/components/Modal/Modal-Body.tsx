@@ -1,4 +1,4 @@
-import { DialogContent } from "@material-ui/core";
+import { DialogContent } from '@material-ui/core';
 
 interface IProps {
   children: any;

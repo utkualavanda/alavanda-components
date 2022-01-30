@@ -1,13 +1,13 @@
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo } from 'react';
 import {
   OutlinedInput,
   FormControl,
   InputLabel,
   FormHelperText,
-} from "@material-ui/core";
-import { v4 as uuidv4 } from "uuid";
-import { useFormContext, Controller } from "react-hook-form";
-import { IOutlinedInputProps } from "./type";
+} from '@material-ui/core';
+import { v4 as uuidv4 } from 'uuid';
+import { useFormContext, Controller } from 'react-hook-form';
+import { IOutlinedInputProps } from './type';
 
 export default (props: IOutlinedInputProps) => {
   const {
@@ -19,7 +19,7 @@ export default (props: IOutlinedInputProps) => {
     watch,
     value,
     endAdornment,
-    type = "text",
+    type = 'text',
     ...rest
   } = props;
 
@@ -51,11 +51,7 @@ export default (props: IOutlinedInputProps) => {
   );
 
   return (
-    <FormControl
-      variant="outlined"
-      fullWidth
-      error={!!errors[name]?.message}
-    >
+    <FormControl variant="outlined" fullWidth error={!!errors[name]?.message}>
       <InputLabel id={id}>{label}</InputLabel>
       <Controller
         render={() => (
@@ -70,11 +66,9 @@ export default (props: IOutlinedInputProps) => {
         )}
         name={name}
         control={control}
-        defaultValue={""}
+        defaultValue={''}
       />
-      <FormHelperText>
-        {errors[name]?.message || helperText}
-      </FormHelperText>
+      <FormHelperText>{errors[name]?.message || helperText}</FormHelperText>
     </FormControl>
   );
 };

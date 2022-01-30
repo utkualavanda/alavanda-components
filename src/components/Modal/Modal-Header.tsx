@@ -1,7 +1,7 @@
-import { DialogTitle } from "@material-ui/core";
+import { DialogTitle } from '@material-ui/core';
 
 interface IProps {
-	title: any;
+  title: any;
 }
 
 export default (props: IProps) => {

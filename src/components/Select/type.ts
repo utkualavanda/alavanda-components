@@ -1,4 +1,4 @@
-import { SelectProps } from "@material-ui/core";
+import { SelectProps } from '@material-ui/core';
 
 interface ISelectOptios {
   data: any[];
@@ -7,7 +7,7 @@ interface ISelectOptios {
 }
 
 export interface ISelectProps
-  extends Omit<SelectProps, "name" | "value" | "onChange"> {
+  extends Omit<SelectProps, 'name' | 'value' | 'onChange'> {
   name: string;
   options: ISelectOptios;
   helperText?: string;

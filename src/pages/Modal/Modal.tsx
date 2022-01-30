@@ -1,5 +1,5 @@
-import * as yup from "yup";
-import { useState } from "react";
+import * as yup from 'yup';
+import { useState } from 'react';
 import {
   Button,
   Form,
@@ -9,7 +9,7 @@ import {
   ModalFooter,
   ModalHeader,
   Select,
-} from "../../components";
+} from '../../components';
 
 interface IProps {
   showModal: boolean;
@@ -49,7 +49,7 @@ export default (props: IProps) => {
         validationSchema={{
           test_input1: yup
             .string()
-            .required("You should have fill this field before submitting"),
+            .required('You should have fill this field before submitting'),
         }}
       >
         <ModalBody>
@@ -68,7 +68,7 @@ export default (props: IProps) => {
               <Select
                 name="test_select"
                 label="test select1"
-                options={{ data: [], displayField: "", displayValue: "" }}
+                options={{ data: [], displayField: '', displayValue: '' }}
               />
             </div>
             <div className="col-6">

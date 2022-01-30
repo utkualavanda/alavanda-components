@@ -1,5 +1,5 @@
-import { Button, Form, DatePicker } from "../../components";
-import * as yup from "yup";
+import { Button, Form, DatePicker } from '../../components';
+import * as yup from 'yup';
 
 export default () => {
   return (
@@ -9,8 +9,8 @@ export default () => {
         validationSchema={{
           test_picker1: yup
             .string()
-            .typeError("This field is required")
-            .required("This field is required"),
+            .typeError('This field is required')
+            .required('This field is required'),
         }}
       >
         <div className="row">
@@ -19,8 +19,8 @@ export default () => {
               name="test_picker1"
               label="Test Picker Component"
               watch={(val) => console.log(val)}
-			//   value={1637001540}
-			  unixTime
+              //   value={1637001540}
+              unixTime
             />
           </div>
           <div className="col-3 mt-3">
